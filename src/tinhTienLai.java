@@ -9,7 +9,10 @@ public class tinhTienLai {
         double interest = scanner.nextDouble();
         System.out.print("Input month: ");
         int month = scanner.nextInt();
-        double totalInterest = money * interest / 12 * month;
+        double totalInterest = 0;
+        for (int i = 1 ; i < month; i++) {
+            totalInterest += money * interest /100 / 12 * month;
+        }
         System.out.println("Total interest is " + totalInterest);
     }
 }
